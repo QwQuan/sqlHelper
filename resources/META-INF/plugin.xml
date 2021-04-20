@@ -1,0 +1,37 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>SQLPOHelp</name>
+  <version>1.0</version>
+  <vendor email="514935722@qq.com"></vendor>
+
+  <description><![CDATA[
+    PO is automatically generated according to the SQL<br>
+    SQL statement is automatically generated according to PO
+    ]]></description>
+
+  <change-notes><![CDATA[
+      First<br>
+      <em>The first test version</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <notificationGroup id="SqlHelper.NotificationGroup" displayType="BALLOON"/>
+  </extensions>
+
+  <actions>
+
+    <action id="actions.PreparedSqlConvertPOAction" class="actions.PreparedSqlConvertPOAction" text="SQLToPO" icon="icon.icon">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <add-to-group group-id="ConsoleEditorPopupMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>
